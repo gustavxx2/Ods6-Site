@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ODS 6</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animacoes.css">
 </head>
 <body>
     <header>
@@ -13,12 +14,20 @@
             <div class="logo">
                 <div class="logo-icon">
                     <i class="fa-solid fa-droplet"></i>
-                <img src="https://tse1.mm.bing.net/th/id/OIP.EyKVBz5a98xoCcKn_1WKoQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                <img src=https://gtagenda2030.org.br/wp-content/uploads/2019/10/ods6.jpg
                 alt="Logo">
                 <h1>ODS 6</h1>
                 <span>Água potável e saneamento</span>
             </div>
 
+             <!--Botoes-->
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="alterar tema">
+                    <i class="fa-solid fa-lua"></i>
+                </button>
+            </div>   
+            <!-- Essa parte acima, e para o cabecalho do site-->
+            
             <!--menu-->
             <ul class="nav-links">
                 <li><a href="#">Inicio</a></li>
@@ -30,16 +39,233 @@
                 <li><a href="#">Contato</a></li>
 
             </ul>
-            <!--Botoes-->
-            <div class="nav-actions">
-                <button id="theme-toggle" aria-label="alterar tema">
-                    <i class="fa-solid fa-lua"></i>
-                </button>
-            </div>    
+         
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <!-- inicio e pequena descricao sobre o site-->
+        <div class="inicio">
+            <p class="eyebrow">- Objetivo 6 - Agenda 2030 Onu </p>
+
+            <h1>Garantir disponibilidade e manejo sustentável da água e saneamento para todos</h1>
+
+            <p class="descricao"> O planeta tem água suficiente para todos — o que falta é infraestrutura, gestão e acesso equitativo. Explore os dados, teste seu consumo e veja o quanto falta para chegarmos lá.</p>
+
+        </div>
+        <!-- medidor de porcentagem global de acesso a agua-->
+         <div class="medidor">
+            <div class="medidor-preenchimento"></div>
+            <p class="medidor-rotulo">75%</p>
+         </div>
+         <p class="medidor-legenda">Estimativa Global do acesso a água potavel segura</p>
+
+         <section id="sobre" class="sobre">
+  <p class="etiqueta">— O que é o ODS 6</p>
+  <h2>Água potável e saneamento para todos</h2>
+
+  <div class="sobre-conteudo">
+    <p>
+      O Objetivo de Desenvolvimento Sustentável 6 (ODS 6) faz parte da Agenda 2030 da ONU
+      e busca garantir o acesso universal e equitativo à água potável e segura para todos
+      até 2030. A meta também prevê acesso a saneamento e higiene adequados para todos,
+      com o fim da defecação a céu aberto, dando atenção especial às necessidades de
+      mulheres, meninas e populações em situação de vulnerabilidade.
+    </p>
+
+    <p>
+      Além do acesso básico, o ODS 6 trata da qualidade da água: as metas incluem reduzir
+      a poluição, eliminar despejos irregulares e diminuir pela metade a proporção de
+      águas residuais não tratadas, junto com o uso mais eficiente da água em todos os
+      setores para enfrentar a escassez hídrica.
+    </p>
+
+    <p>
+      Segundo a ONU, a escassez de água já afeta mais de 40% da população mundial, um
+      número que tende a crescer com as mudanças climáticas e a má gestão dos recursos
+      naturais.
+    </p>
+
+    <span class="fonte">Fonte: ONU Portugal / UNRIC — unric.org</span>
+  </div>
+</section>
+
+        
+         <!-- Estatistica destacada -->
+         <div class="estatistica-Destaque">
+            <span class="numero"id="contador">2</span>
+            <p class="texto-estatistica">bilhões de pessoas ainda não têm acesso a água potável segura. (Fonte: OMS/UNICEF, 2025)</p>
+        </div>
+
+        <!--Dados-->
+        <section class="dados"> 
+            <p class="etiqueta">-- O TAMANHO DO PROBLEMA</p>
+            <h1>Os números por trás do objetivo</h1>
+    
+            <div class="cartoes">
+                <div class="cartao">
+                    <span class="numero-cartao">33</span>
+                    <p></p> milhões de pessoas, não têm acesso a água potável no Brasil.</p>
+                </div>
+                <div class="cartao">
+                    <span class="numero-cartao">46%</span> 
+                    <p>da polução vive sem acesso a sanemanto básico.</p>
+                </div>
+                <div class="cartao">
+                    <span class="numero-cartao">1,400</span> 
+                    <p>milhão de morte em 2019, foram atribuidas a serviços inadequados de servço de higiene
+                         </p>
+                </div>
+            </div>
+            <p class="descrição"> Dados Estatisticos. (Fontes: Agencia Brasil (2024), UN News (2023)) </p>
+        </section>
+        
+        <!-- Simulador de consumo de agua-->
+        <section class="simulador">
+            <p class="etiqueta">-- INTERATIVO</p>
+            <h2>Quanta agua voce usa por dia?</h2>
+            <p class="descricao"> Descubra o quanto de água você consome diariamente e veja como pequenas mudanças podem fazer uma grande diferença.</p>
+
+            <div class="simulador-grade">
+                <div class="controles">
+                    <div class="campo">
+                        <label>tempo de banho(minutos)-<span class="valor"id="valorBanho">8</span></label>
+                        <input type="range" id="controleBanho" min="1" max="30" value="8">
+                    </div>
+
+                    <div class="campo">
+                        <label>Descargas por dia - <span class="valor" id="valorDescargas">5</span></label>
+                        <input type="range" id="controleDescargas" min="0" max="20" value="5">
+                    </div>
+                    
+                    <div class="campo">
+                        <label>vezes que escova os dentes com a torneira aberta - <span class="valor" id="valorEscovacao">1</span></label>
+                        <input type="range" id="controleEscovacao" min="0" max="10" value="1">
+                    </div>
+                </div>
+                
+                <div class="resultado-simulador">
+                    <span class="total-litros" id="totalLitros">0 L</span>
+                    <p> de agua consumida hoje, com base nos seus habitos</p>
+                    <div class="Barra">
+                        <div class="barra-preenchimento" id="barraPreenchimento"></div>
+                    </div>
+                    <p id="comparacao">Ajjuste os controles ao lado</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz de interação-->            
+        <section class="quiz">
+            <div class="container"></div>
+            <div class="eyebrow">--Teste seu conhecimento</div>
+            <h2>Quiz - ODS 6</h2>
+            <p class="section-sub">4 perguntas rápidas para descobrir o quanto você sabe sobre água e sanemento.</p>
+            <div class="quiz-box"></div>
+            <div clas="quiz-progress" id="quizProgress"></div>
+            <div class="quiz-question" id="quizQuestion">Carregando pergunta...</div>
+            <div class="quiz-options" id="quizOptions"></div>
+            <div class="quiz-footer">
+                <span class="quiz-score"></span>Pontuação: <span id="quizScore">0</span>/4</span> 
+                <button class="btn btn-primar" id="quizNext" style="display:none;">Próxima pergunta</button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="dicas">
+  <p class="etiqueta">— Ação individual</p>
+  <h2>Pequenos hábitos, grande impacto</h2>
+  <p class="descricao">Como preservar água: 6 dicas para economizar água e evitar desperdícios</p>
+
+  <div class="grade-dicas">
+    <div class="dica">
+      <div class="icone-dica">💧</div>
+      <h3>Feche a torneira</h3>
+      <p>Ao escovar os dentes ou ensaboar as mãos, cada minuto economizado poupa até 12 litros.</p>
+    </div>
+
+    <div class="dica">
+      <div class="icone-dica">🚿</div>
+      <h3>Banhos mais curtos</h3>
+      <p>Reduzir 5 minutos no banho pode economizar mais de 90 litros por semana.</p>
+    </div>
+
+    <div class="dica">
+      <div class="icone-dica">🔧</div>
+      <h3>Conserte vazamentos</h3>
+      <p>Uma torneira pingando pode desperdiçar mais de 45 litros por dia.</p>
+    </div>
+
+    <div class="dica">
+      <div class="icone-dica">🪣</div>
+      <h3>Reaproveite água</h3>
+      <p>Água da máquina de lavar ou do banho pode ser reutilizada na limpeza.</p>
+    </div>
+
+    <div class="dica">
+      <div class="icone-dica">🌱</div>
+      <h3>Regue no horário certo</h3>
+      <p>Regar plantas cedo ou à noite reduz a evaporação e o desperdício.</p>
+    </div>
+
+    <div class="dica">
+      <div class="icone-dica">📢</div>
+      <h3>Compartilhe o tema</h3>
+      <p>Falar sobre o ODS 6 ajuda a manter o assunto relevante na sua comunidade.</p>
+    </div>
+  </div>
+</section>
+        
+    
+    </main>
+    <footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <div class="logo"><span class="logo-mark">06</span> ODS 6</div>
+        <p>Projeto acadêmico sobre Água Potável e Saneamento, desenvolvido com HTML, CSS e JavaScript puro.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Seções</h4>
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#simulador">Simulador</a>
+          <a href="#estatisticas">Estatísticas</a>
+          <a href="#quiz">Quiz</a>
+          <a href="#dicas">Dicas</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <div>
+          <h4>Grupo</h4>
+          <ul class="integrantes">
+            <li>Felipe Oliveira</li>
+            <li>Thiago Fontan</li>
+            <li>Cauã Brasileiro</li>
+            <li>Kauã Alves</li>
+            <li>Murilo Lima</li>
+            <li>Breno Carvalho</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>Trabalho acadêmico - ODS 6</span>
+      <span>Feito com HTML, CSS e JS puro</span>
+    </div>
+  </div>
+</footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/simulador.js"></script>
+   
 </body>
 
 </html>
