@@ -1,0 +1,16 @@
+const btn = document.querySelector("#theme-toggle");
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+const contador = document.querySelector("#contador");
+
+let i = 0;
+const alvo = 2;
+
+const intervalo = setInterval(() => {
+  i++;
+  contador.textContent = i;
+
+  if (i >= alvo) clearInterval(intervalo);
+}, 800);
