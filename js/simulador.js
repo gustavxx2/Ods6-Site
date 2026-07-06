@@ -35,6 +35,7 @@ function mostrar() {
       score.textContent = pontos;
 
       [...op.children].forEach(b => b.disabled = true);
+      next.style.display = "inline-block";
     };
 
     op.appendChild(btn);

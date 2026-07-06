@@ -1,0 +1,25 @@
+@keyframes subirSuave {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inicio, .sobre, .estatistica-Destaque, .dados, .simulador, .quiz, .dicas {
+    animation: subirSuave 1s ease-out forwards;
+}
+
+/* Animação de transição do Quiz */
+.quiz-question, .quiz-options {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

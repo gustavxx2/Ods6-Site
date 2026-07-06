@@ -248,52 +248,432 @@ html{
     object-fit: cover;
 }
 
-/* ================= FOOTER ================= */
-
-footer{
-    background: #fff;
-    color: #1f2937;
-    padding: 50px 8%;
-    text-align: center;
-    border-top: 1px solid #ddd;
+/* ================= TEMA ESCURO (Dark Mode) ================= */
+body.dark {
+    background: #111827;
+    color: #f9fafb;
 }
 
-.footer-titulo{
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #9ca3af;
+body.dark .navbar, 
+body.dark footer, 
+body.dark .cartao, 
+body.dark .simulador, 
+body.dark .quiz-box, 
+body.dark .dica {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f9fafb;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+body.dark .nav-links a { color: #f9fafb; }
+body.dark .logo h1, 
+body.dark h2, 
+body.dark .total-litros, 
+body.dark .footer-links h4,
+body.dark .inicio h1,
+body.dark .sobre h2 { 
+    color: #fff; 
+}
+body.dark .resultado-simulador { background: #374151; }
+body.dark .quiz-options button { background: #374151; color: #fff; border-color: #4b5563; }
+body.dark .descricao, 
+body.dark .texto-estatistica, 
+body.dark .sobre-conteudo p,
+body.dark p { 
+    color: #d1d5db; 
+}
+
+/* ================= SEÇÃO DADOS ================= */
+.dados {
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.dados h1 {
+    color: #06283d;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.cartoes {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.cartao {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+}
+
+.numero-cartao {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    color: #2bb8b2;
     margin-bottom: 15px;
 }
 
-.integrantes{
+/* ================= SIMULADOR ================= */
+.simulador {
+    width: 80%;
+    margin: 80px auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.simulador h2 {
+    font-size: 36px;
+    color: #06283d;
+    margin-bottom: 10px;
+}
+
+.simulador-grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.campo { margin-bottom: 25px; }
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.valor { color: #2bb8b2; font-size: 18px; }
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #2bb8b2;
+    cursor: pointer;
+}
+
+.resultado-simulador {
+    text-align: center;
+    padding: 40px;
+    background: #f5f8f8;
+    border-radius: 16px;
+}
+
+.total-litros {
+    display: block;
+    font-size: 56px;
+    font-weight: bold;
+    color: #06283d;
+    margin-bottom: 10px;
+}
+
+.Barra {
+    width: 100%;
+    height: 20px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin: 25px 0;
+    overflow: hidden;
+}
+
+.barra-preenchimento {
+    height: 100%;
+    background: linear-gradient(90deg, #35bdb7, #11998e);
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+#comparacao {
+    font-weight: bold;
+    color: #6b7280;
+}
+
+/* ================= QUIZ ================= */
+.quiz {
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.quiz h2 {
+    font-size: 36px;
+    color: #06283d;
+}
+
+.quiz-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.quiz-progress {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.quiz-question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.quiz-options button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #e5e7eb;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.quiz-options button:hover:not(:disabled) {
+    border-color: #2bb8b2;
+    background: #f0fafa;
+}
+
+.quiz-options button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn-primar {
+    background: #2bb8b2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primar:hover { background: #11998e; }
+
+/* ================= DICAS ================= */
+.dicas {
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.dicas .descricao {
+    margin: 0 auto; 
+}
+
+.dicas h2 {
+    font-size: 36px;
+    color: #06283d;
+    margin-bottom: 10px;
+}
+
+.grade-dicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.dica {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.dica:hover { transform: translateY(-10px); }
+
+.icone-dica {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.dica h3 {
+    color: #06283d;
+    margin-bottom: 10px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    position: relative;
+    background: #e0f2fe; 
+    color: #374151;
+    padding: 70px 0 30px 0;
+    margin-top: 80px; 
+    border-top: none; 
+    font-size: 14px;
+}
+
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: -50px; 
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #e0f2fe; 
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0; 
+}
+
+footer .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-grid .logo {
+    color: #06283d;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-mark {
+    background: #2bb8b2;
+    color: #fff;
+    width: 28px;
+    height: 28px;
     display: flex;
     justify-content: center;
-    gap: 25px;
-    list-style: none;
-    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 13px;
 }
 
-.integrantes li{
-    font-size: 16px;
-    color: #1f2937;
+.footer-grid p {
+    line-height: 1.6;
+    color: #4b5563;
+    max-width: 320px;
 }
 
-.integrantes a{
-    color: #1f2937;
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-links h4 {
+    color: #06283d;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.footer-links a, 
+.integrantes li {
+    display: block;
+    color: #4b5563;
     text-decoration: none;
-    transition: .3s;
+    margin-bottom: 12px;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.integrantes a:hover{
-    color: #2bb8b2;
+.footer-links a:hover { 
+    color: #11998e; 
+    transform: translateX(3px);
 }
+
+.integrantes {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #bae6fd; 
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* ================= AJUSTE DA CURVA NO MODO ESCURO ================= */
+body.dark footer {
+    background: #1f2937;
+}
+
+body.dark footer::before {
+    background: #1f2937; 
+}
+
+body.dark .footer-bottom {
+    border-top-color: #374151;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
 
 /* ================= RESPONSIVO ================= */
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
-    .navbar{
+    
+    .navbar {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 20px;
@@ -301,53 +681,130 @@ footer{
 
     .logo,
     .nav-links,
-    .nav-actions{
+    .nav-actions {
         justify-self: center;
     }
 
-    .nav-links{
+    .nav-links {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .inicio{
+    .inicio {
         width: 90%;
     }
 
-    .inicio h1{
+    .inicio h1 {
         width: 100%;
         font-size: 42px;
     }
 
-    .descricao{
+    .descricao {
         width: 100%;
         font-size: 20px;
     }
 
-    .estatistica-Destaque{
+    .estatistica-Destaque {
         flex-direction: column;
         text-align: center;
     }
 
-    .texto-estatistica{
+    .texto-estatistica {
         width: 100%;
         font-size: 22px;
     }
 
-    .sobre{
+    .sobre {
         width: 90%;
     }
 
-    .sobre h2{
+    .sobre h2 {
         width: 100%;
         font-size: 32px;
     }
 
-    .sobre-grid{
+    .sobre-grid {
         flex-direction: column;
     }
 
-    .sobre-conteudo p{
+    .sobre-conteudo p {
         font-size: 18px;
     }
+
+    /* Partes novas (Simulador e Footer) */
+    .simulador-grade, 
+    .footer-grid, 
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid { 
+        text-align: center; 
+    }
+
+    .footer-bottom { 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+}
+
+/* ================= BOTÃO DE TEMA (VISÍVEL E CLARO) ================= */
+.nav-actions button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+    height: 45px;
+    width: auto; /* Tira a largura fixa antiga */
+    border-radius: 25px; /* Formato de pílula */
+    border: 2px solid #2bb8b2; /* Borda colorida para destacar do fundo branco */
+    background: #e0f2fe; /* Fundo azul clarinho */
+    color: #06283d;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Escreve "Tema" ao lado do ícone sem precisar alterar o HTML */
+.nav-actions button::after {
+    content: "Tema";
+    font-size: 16px;
+}
+
+/* Efeito ao passar o mouse (Modo Claro) */
+.nav-actions button:hover {
+    background: #2bb8b2;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Ajuste do botão no Modo Escuro */
+body.dark .nav-actions button {
+    background: #374151; /* Cinza diferente do fundo do menu */
+    border-color: #fbbf24; /* Borda amarela chamativa */
+    color: #fbbf24;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Efeito ao passar o mouse (Modo Escuro) */
+body.dark .nav-actions button:hover {
+    background: #fbbf24;
+    color: #111827;
+}
+
+/* Cor dos integrantes no modo escuro */
+body.dark .integrantes li {
+    color: #2bb8b2; 
+}
+
+/* ================= TÍTULOS NO MODO ESCURO ================= */
+body.dark .inicio h1,
+body.dark .sobre h2,
+body.dark .dados h1,
+body.dark .simulador h2,
+body.dark .quiz h2,
+body.dark .dicas h2 {
+    color: #2bb8b2;
 }

@@ -23,28 +23,27 @@
              <!--Botoes-->
             <div class="nav-actions">
                 <button id="theme-toggle" aria-label="alterar tema">
-                    <i class="fa-solid fa-lua"></i>
+                    <i class="fa-solid fa-moon"></i>
                 </button>
             </div>   
             <!-- Essa parte acima, e para o cabecalho do site-->
             
             <!--menu-->
             <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Simulador</a></li>
-                <li><a href="#">Estatisticas</a></li>
-                <li><a href="#">Quiz</a></li>
-                <li><a href="#">Dicas</a></li>
-                <li><a href="#">Contato</a></li>
-
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#estatisticas">Estatisticas</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
          
         </nav>
     </header>
     <main>
         <!-- inicio e pequena descricao sobre o site-->
-        <div class="inicio">
+        <div class="inicio" id="inicio">
             <p class="eyebrow">- Objetivo 6 - Agenda 2030 Onu </p>
 
             <h1>Garantir disponibilidade e manejo sustentável da água e saneamento para todos</h1>
@@ -90,6 +89,7 @@
 
   <div class="sobre-imagem">
     <img src="https://tse2.mm.bing.net/th/id/OIP.l1NRy5_f1r5aRJ18IQjySQHaE6?cb=thfc1falcon4&w=800&h=531&rs=1&pid=ImgDetMain&o=7&rm=3"
+  alt="Imagem ilustrativa sobre o ODS 6">
   </div>
   
 </div>
@@ -103,7 +103,7 @@
         </div>
 
         <!--Dados-->
-        <section class="dados"> 
+        <section class="dados" id="estatisticas"> 
             <p class="etiqueta">-- O TAMANHO DO PROBLEMA</p>
             <h1>Os números por trás do objetivo</h1>
     
@@ -126,7 +126,7 @@
         </section>
         
         <!-- Simulador de consumo de agua-->
-        <section class="simulador">
+        <section class="simulador" id="simulador">
             <p class="etiqueta">-- INTERATIVO</p>
             <h2>Quanta agua voce usa por dia?</h2>
             <p class="descricao"> Descubra o quanto de água você consome diariamente e veja como pequenas mudanças podem fazer uma grande diferença.</p>
@@ -155,30 +155,30 @@
                     <div class="Barra">
                         <div class="barra-preenchimento" id="barraPreenchimento"></div>
                     </div>
-                    <p id="comparacao">Ajjuste os controles ao lado</p>
+                    <p id="comparacao">Ajuste os controles ao lado</p>
                 </div>
             </div>
         </section>
         
         <!-- Quiz de interação-->            
-        <section class="quiz">
-            <div class="container"></div>
+        <section class="quiz" id="quiz">
             <div class="eyebrow">--Teste seu conhecimento</div>
             <h2>Quiz - ODS 6</h2>
-            <p class="section-sub">4 perguntas rápidas para descobrir o quanto você sabe sobre água e sanemento.</p>
-            <div class="quiz-box"></div>
-            <div clas="quiz-progress" id="quizProgress"></div>
-            <div class="quiz-question" id="quizQuestion">Carregando pergunta...</div>
-            <div class="quiz-options" id="quizOptions"></div>
-            <div class="quiz-footer">
-                <span class="quiz-score"></span>Pontuação: <span id="quizScore">0</span>/4</span> 
-                <button class="btn btn-primar" id="quizNext" style="display:none;">Próxima pergunta</button>
+            <p class="descricao">4 perguntas rápidas para descobrir o quanto você sabe sobre água e saneamento.</p>
+            
+            <div class="quiz-box">
+                <div class="quiz-progress" id="quizProgress"></div>
+                <div class="quiz-question" id="quizQuestion">Carregando pergunta...</div>
+                <div class="quiz-options" id="quizOptions"></div>
+                
+                <div class="quiz-footer">
+                    <span>Pontuação: <span id="quizScore" class="quiz-score">0</span>/4</span> 
+                    <button class="btn btn-primar" id="quizNext" style="display:none;">Próxima pergunta</button>
                 </div>
             </div>
-        </div>
         </section>
 
-        <section class="dicas">
+        <section class="dicas" id="dicas">
   <p class="etiqueta">— Ação individual</p>
   <h2>Pequenos hábitos, grande impacto</h2>
   <p class="descricao">Como preservar água: 6 dicas para economizar água e evitar desperdícios</p>
